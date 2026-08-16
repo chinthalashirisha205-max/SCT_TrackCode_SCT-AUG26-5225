@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | SkillCraft Task 4</title>
+    <link rel="stylesheet" href="index4.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header & Dark Mode Toggle -->
+        <header>
+            <h1>Task Manager</h1>
+            <button id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Task Creation Form -->
+        <form id="taskForm" class="task-form">
+            <div class="input-group">
+                <input type="text" id="taskTitle" placeholder="Task Title..." required>
+                <select id="taskPriority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+                <button type="submit" class="add-btn">+ Add Task</button>
+            </div>
+        </form>
+
+        <!-- Controls: Search & Filters -->
+        <div class="controls-bar">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <!-- Task Analytics / Stats -->
+        <div class="stats-bar">
+            <span>Total: <strong id="totalTasks">0</strong></span>
+            <span>Completed: <strong id="completedTasks">0</strong></span>
+            <span>Pending: <strong id="pendingTasks">0</strong></span>
+        </div>
+
+        <!-- Task List Container -->
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+
+    <script src="index4.js"></script>
+</body>
+</html>
