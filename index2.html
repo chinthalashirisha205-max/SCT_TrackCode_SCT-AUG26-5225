@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Stopwatch | SkillCraft Task</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <h1>Stopwatch App</h1>
+        
+        <div class="display" id="display">00:00:00.00</div>
+        
+        <div class="controls">
+            <button id="startBtn" onclick="startTimer()">Start</button>
+            <button id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
+            <button id="resetBtn" onclick="resetTimer()" disabled>Reset</button>
+            <button id="lapBtn" onclick="recordLap()" disabled>Lap</button>
+        </div>
+
+        <div class="laps-container">
+            <h3>Lap Times</h3>
+            <ul id="lapsList"></ul>
+        </div>
+    </div>
+
+    <script src="index2.js"></script>
+</body>
+</html>
